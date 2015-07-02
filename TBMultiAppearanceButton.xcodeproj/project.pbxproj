@@ -28,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB1D41BD1B45132600A38F46 /* TBMultiAppearanceButton.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TBMultiAppearanceButton.podspec; sourceTree = "<group>"; };
+		CB1D41BF1B4513D200A38F46 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CB1D41C01B4513E900A38F46 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CBC549ED1B438B7D00B3A774 /* TBMultiAppearanceButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TBMultiAppearanceButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBCF90D11B44A3BC00FEE091 /* TBControlAppearanceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBControlAppearanceType.swift; sourceTree = "<group>"; };
 		CBCF90D41B44BDE000FEE091 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -59,9 +62,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB1D41BC1B4512C300A38F46 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				CB1D41BD1B45132600A38F46 /* TBMultiAppearanceButton.podspec */,
+				CB1D41C01B4513E900A38F46 /* README.md */,
+				CB1D41BF1B4513D200A38F46 /* LICENSE */,
+				CBD56EFB1B4468980052CBB5 /* Info.plist */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
 		CBC549E31B438B7D00B3A774 = {
 			isa = PBXGroup;
 			children = (
+				CB1D41BC1B4512C300A38F46 /* Metadata */,
 				CBC549EF1B438B7D00B3A774 /* TBMultiAppearanceButton */,
 				CBD56F181B449BE90052CBB5 /* TBMultiAppearanceButtonTests */,
 				CBC549EE1B438B7D00B3A774 /* Products */,
@@ -83,17 +98,8 @@
 				CBD56EFD1B4468980052CBB5 /* TBMultiAppearanceButton.swift */,
 				CBCF90D11B44A3BC00FEE091 /* TBControlAppearanceType.swift */,
 				CBD56F071B447D5E0052CBB5 /* TBSystemDefaults.swift */,
-				CBD56F031B4469020052CBB5 /* Supporting Files */,
 			);
 			path = TBMultiAppearanceButton;
-			sourceTree = "<group>";
-		};
-		CBD56F031B4469020052CBB5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CBD56EFB1B4468980052CBB5 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		CBD56F181B449BE90052CBB5 /* TBMultiAppearanceButtonTests */ = {
