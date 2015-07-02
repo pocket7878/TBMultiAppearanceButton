@@ -25,16 +25,5 @@
 
 import Foundation
 
-public protocol TBControlAppearanceType: RawRepresentable, Hashable {  
-  var rawValue: Int { get }
-
-  init(rawValue: Int)
-}
-
-public extension TBControlAppearanceType {
-  var hashValue: Int { return rawValue }
-}
-
-func ==<T: TBControlAppearanceType>(lhs: T, rhs: T) -> Bool {
-  return lhs.rawValue == rhs.rawValue
-}
+/// Enum-type that contains the possible appearances known to a button
+public protocol TBControlAppearanceType: RawRepresentable, Hashable {}

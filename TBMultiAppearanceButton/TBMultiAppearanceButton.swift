@@ -47,43 +47,43 @@ public class TBMultiAppearanceButton<TBControlAppearance: TBControlAppearanceTyp
   /// Holds the currently active TBControlAppearance; otherwise nil.
   /// Setting this property conforms the button to the current
   /// appearance.
-  private var _appearance: Int? {
+  private var _appearance: TBControlAppearance? {
     didSet {
       guard let appearance = _appearance else {
         return
       }
-      
-      updateAppearance(TBControlAppearance(rawValue: appearance))
+            
+      updateAppearance(appearance)
     }
   }
   
   override public var highlighted: Bool {
     didSet {
-      guard let _appearance = _appearance else {
+      guard let appearance = _appearance else {
         return
       }
       
-      updateAppearance(TBControlAppearance(rawValue: _appearance))
+      updateAppearance(appearance)
     }
   }
   
   override public var selected: Bool {
     didSet {
-      guard let _appearance = _appearance else {
+      guard let appearance = _appearance else {
         return
       }
       
-      updateAppearance(TBControlAppearance(rawValue: _appearance))
+      updateAppearance(appearance)
     }
   }
   
   override public var enabled: Bool {
     didSet {
-      guard let _appearance = _appearance else {
+      guard let appearance = _appearance else {
         return
       }
       
-      updateAppearance(TBControlAppearance(rawValue: _appearance))
+      updateAppearance(appearance)
     }
   }
   
@@ -113,7 +113,7 @@ public class TBMultiAppearanceButton<TBControlAppearance: TBControlAppearanceTyp
   /// - parameter appearance: The TBControlAppearance that has been updated.
   /// - parameter state: The UIControlState that has been updated.
   private func shouldUpdateAppearance(appearance: TBControlAppearance, andState state: UIControlState) {
-    if _appearance == appearance.rawValue && self.state == state {
+    if _appearance == appearance && self.state == state {
       updateAppearance(appearance)
     }
   }
@@ -314,15 +314,15 @@ public extension TBMultiAppearanceButton {
   ///
   /// - parameter appearance: The TBControlAppearance to display.
   public func activateAppearance(appearance: TBControlAppearance) {
-    _appearance = appearance.rawValue
+    _appearance = appearance
   }
   
   /// The currently active TBControlAppearance
   var appearance: TBControlAppearance? {
-    guard let _appearance = _appearance else {
+    guard let appearance = _appearance else {
       return nil
     }
     
-    return TBControlAppearance(rawValue: _appearance)
+    return appearance
   }
 }
