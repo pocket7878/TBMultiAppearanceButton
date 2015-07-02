@@ -52,13 +52,13 @@ platform :ios, '9.0' # or, :osx, '10.10'
 use_frameworks!
 
 target 'YourProject' do
-pod 'TBMultiAppearanceButton', '~> 1.0.0'
+pod 'TBMultiAppearanceButton', '~> 1.1.0'
 end
 ```
 
 ### Carthage
 
-Add `github "TalkingBibles/TBMultiAppearanceButton" ~> 1.0.0` to your Cartfile and run `carthage bootstrap`. This builds frameworks for Mac and iOS targets.
+Add `github "TalkingBibles/TBMultiAppearanceButton" ~> 1.1.0` to your Cartfile and run `carthage bootstrap`. This builds frameworks for Mac and iOS targets.
 
 ```sh
 > echo 'github "TalkingBibles/TBMultiAppearanceButton" ~> 1.0.0' >> Cartfile
