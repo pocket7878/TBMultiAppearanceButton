@@ -25,12 +25,8 @@
 
 import UIKit
 
-extension UIControlState: Hashable {
-  public var hashValue: Int {
-    return Int(rawValue)
-  }
-}
-
+/// Generic subclass of UIButton that provides methods to configure and switch between multiple appearances,
+/// which are specified during initialization by an enum conforming to TBControlAppearanceType.
 public class TBMultiAppearanceButton<TBControlAppearance: TBControlAppearanceType>: UIButton {
   private var titlesForAppearance = [TBControlAppearance: [UIControlState: String]]()
   private var attributedTitlesForAppearance = [TBControlAppearance: [UIControlState: NSAttributedString]]()
