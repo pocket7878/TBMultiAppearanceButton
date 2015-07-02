@@ -202,37 +202,41 @@ class TBMultiAppearanceButtonTests: XCTestCase {
     button.activateAppearance(.Ten)
     XCTAssertEqual(button.imageForState(.Normal), tenImage)
     
-    // Nullify Ten background image and check
+    // Nullify Ten image and check
     button.setImage(nil, forAppearance: .Ten, andState: .Normal)
     XCTAssertEqual(button.imageForState(.Normal), nil)
   }
   
   func testEnabled() {
-    let oneBool = true
-    let anotherOneBool = false
-    let tenBool = false
+    let enabledString = "Enabled"
+    let disabledString = "Disabled"
+    let anotherEnabledString = "Another Enabled"
+    let anotherDisabledString = "Another Disabled"
     
     let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: buttonFrame)
     
     // Set enabled for One and Ten
-    button.setEnabled(oneBool, forAppearance: .One, andState: .Normal)
-    button.setEnabled(tenBool, forAppearance: .Ten, andState: .Normal)
+    button.setTitle(enabledString, forAppearance: .One, andState: .Normal)
+    button.setTitle(disabledString, forAppearance: .One, andState: .Disabled)
     
-    // Activate One and check enabled
+    button.setTitle(anotherEnabledString, forAppearance: .Ten, andState: .Normal)
+    button.setTitle(anotherDisabledString, forAppearance: .Ten, andState: .Disabled)
+    
+    // Activate One and check title
     button.activateAppearance(.One)
-    XCTAssertEqual(button.enabled, oneBool)
+    XCTAssertEqual(button.titleLabel?.text, enabledString)
     
-    // Change enabled for One and check
-    button.setEnabled(anotherOneBool, forAppearance: .One, andState: .Normal)
-    XCTAssertEqual(button.enabled, anotherOneBool)
+    // Disable One and check
+    button.enabled = false
+    XCTAssertEqual(button.titleLabel?.text, disabledString)
     
-    // Activate Ten and check enabled
+    // Activate Ten and check for disabled
     button.activateAppearance(.Ten)
-    XCTAssertEqual(button.enabled, tenBool)
+    XCTAssertEqual(button.titleLabel?.text, anotherDisabledString)
     
-    // Nullify Ten background image and check that enabled is false
-    button.setEnabled(nil, forAppearance: .One, andState: .Normal)
-    XCTAssertEqual(button.enabled, false)
+    // Enable Ten and check
+    button.enabled = true
+    XCTAssertEqual(button.titleLabel?.text, anotherEnabledString)
   }
   
   func testHighlighted() {

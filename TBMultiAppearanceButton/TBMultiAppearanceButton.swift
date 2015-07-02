@@ -60,6 +60,16 @@ public class TBMultiAppearanceButton<TBControlAppearance: TBControlAppearanceTyp
     }
   }
   
+  override public var enabled: Bool {
+    didSet {
+      guard let _appearance = _appearance else {
+        return
+      }
+      
+      updateAppearance(TBControlAppearance(rawValue: _appearance))
+    }
+  }
+  
   /// Update the visible properties of the button as specified for the current state and appearance
   ///
   /// - parameter appearance: The TBControlAppearance to apply to the button.
@@ -79,8 +89,6 @@ public class TBMultiAppearanceButton<TBControlAppearance: TBControlAppearanceTyp
     
     let image = imageForAppearance(appearance, andState: state) ?? TBSystemDefaults.imageForState(state)
     setImage(image, forState: state)
-    
-    enabled = enabledForAppearance(appearance, andState: state) ?? enabled
   }
   
   /// Updates appearance for specified appearance if the specified state matches the current state
@@ -281,44 +289,7 @@ public extension TBMultiAppearanceButton {
     
     imagesForAppearance[appearance]?[state] = image
   }
-
-
-  // MARK: - Setting and getting control attributes
-
-  /// Returns enabled'ness for specificed button appearance.
-  ///
-  /// - parameter appearance: The TBControlAppearance that is enabled or disabled.
-  /// - parameter andState: The UIControlState that receives the title.
-  ///
-  /// - returns: The enabled'ness used for the specified appearance. If not
-  ///   specified, return nil.
-  func enabledForAppearance(appearance: TBControlAppearance, andState state: UIControlState) -> Bool? {
-    return enabledForAppearance[appearance]?[state]
-  }
-
-  /// Set enabled'ness for specificed button appearance.
-  ///
-  /// Specify true to make the control enabled when selecting the specified appearance;
-  /// otherwise, specify false to make it disabled. The default value is to make no change.
-  ///
-  /// - parameter enabled: The boolean value to use for the specified appearance.
-  /// - parameter forAppearance: The TBControlAppearance to be enabled or disabled.
-  /// - parameter andState: The UIControlState that receives the enabled'ness.
-  func setEnabled(enabled: Bool?, forAppearance appearance: TBControlAppearance, andState state: UIControlState) {
-    defer { shouldUpdateAppearance(appearance, andState: state) }
-
-    guard let enabled = enabled else {
-      enabledForAppearance.removeValueForKey(appearance)
-      return
-    }
-    
-    if enabledForAppearance[appearance] == nil {
-      enabledForAppearance[appearance] = [:]
-    }
-
-    enabledForAppearance[appearance]?[state] = enabled
-  }
-
+  
 
   // MARK: Setting and Getting Control Appearance
 
