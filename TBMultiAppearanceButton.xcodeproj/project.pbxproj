@@ -15,6 +15,7 @@
 		CBD56F081B447D5E0052CBB5 /* TBSystemDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD56F071B447D5E0052CBB5 /* TBSystemDefaults.swift */; };
 		CBD56F1A1B449BE90052CBB5 /* TBMultiAppearanceButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD56F191B449BE90052CBB5 /* TBMultiAppearanceButtonTests.swift */; };
 		CBD56F1C1B449BE90052CBB5 /* TBMultiAppearanceButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC549ED1B438B7D00B3A774 /* TBMultiAppearanceButton.framework */; };
+		CBF8B1E71B45CA99000BE3F3 /* UIControlState+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF8B1E61B45CA99000BE3F3 /* UIControlState+extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		CBD56F171B449BE90052CBB5 /* TBMultiAppearanceButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBMultiAppearanceButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD56F191B449BE90052CBB5 /* TBMultiAppearanceButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBMultiAppearanceButtonTests.swift; sourceTree = "<group>"; };
 		CBD56F1B1B449BE90052CBB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBF8B1E61B45CA99000BE3F3 /* UIControlState+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControlState+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				CBD56EFD1B4468980052CBB5 /* TBMultiAppearanceButton.swift */,
 				CBCF90D11B44A3BC00FEE091 /* TBControlAppearanceType.swift */,
 				CBD56F071B447D5E0052CBB5 /* TBSystemDefaults.swift */,
+				CBF8B1E61B45CA99000BE3F3 /* UIControlState+extensions.swift */,
 			);
 			path = TBMultiAppearanceButton;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				CBD56F081B447D5E0052CBB5 /* TBSystemDefaults.swift in Sources */,
 				CBD56F011B4468980052CBB5 /* TBMultiAppearanceButton.swift in Sources */,
 				CBCF90D21B44A3BC00FEE091 /* TBControlAppearanceType.swift in Sources */,
+				CBF8B1E71B45CA99000BE3F3 /* UIControlState+extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

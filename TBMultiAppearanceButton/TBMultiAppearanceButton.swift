@@ -129,6 +129,17 @@ public extension TBMultiAppearanceButton {
     return titlesForAppearance[appearance]?[state]
   }
 
+  /// Sets the title to use for the specified appearance and multiple states.
+  ///
+  /// - parameter title: The text string to use for the specified appearance.
+  /// - parameter forAppearance: The TBControlAppearance that uses the specified title.
+  /// - parameter andStates: The UIControlStates that receive the title.
+  func setTitle(title: String?, forAppearance appearance: TBControlAppearance, andStates states: [UIControlState]) {
+    for state in states {
+      setTitle(title, forAppearance: appearance, andState: state)
+    }
+  }
+  
   /// Sets the title to use for the specified appearance.
   ///
   /// - parameter title: The text string to use for the specified appearance.
@@ -160,6 +171,17 @@ public extension TBMultiAppearanceButton {
     return attributedTitlesForAppearance[appearance]?[state]
   }
 
+  /// Sets the attributed title to use for the specified appearance and multiple states.
+  ///
+  /// - parameter title: The styled text string to use for the specified appearance.
+  /// - parameter forAppearance: The TBControlAppearance that uses the specified attributed title.
+  /// - parameter andStates: The UIControlStates that receive the attributed title.
+  func setAttributedTitle(title: NSAttributedString?, forAppearance appearance: TBControlAppearance, andStates states: [UIControlState]) {
+    for state in states {
+      setAttributedTitle(title, forAppearance: appearance, andState: state)
+    }
+  }
+  
   /// Sets the attributed title to use for the specified appearance.
   ///
   /// - parameter title: The styled text string to use for the specified appearance.
@@ -190,6 +212,17 @@ public extension TBMultiAppearanceButton {
     return titleColorsForAppearance[appearance]?[state]
   }
 
+  /// Sets the title color to use for the specified appearance and multiple states.
+  ///
+  /// - parameter color: The color of the title to use for the specified appearance.
+  /// - parameter forAppearance: The TBControlAppearance that uses the specified title color.
+  /// - parameter andState: The UIControlStates that receive the title color.
+  func setTitleColor(color: UIColor?, forAppearance appearance: TBControlAppearance, andStates states: [UIControlState]) {
+    for state in states {
+      setTitleColor(color, forAppearance: appearance, andState: state)
+    }
+  }
+  
   /// Sets the title color to use for the specified appearance.
   ///
   /// - parameter color: The color of the title to use for the specified appearance.
@@ -220,6 +253,17 @@ public extension TBMultiAppearanceButton {
     return titleShadowColorsForAppearance[appearance]?[state]
   }
 
+  /// Sets the shadow color of the title to use for the specified appearance and multiple states.
+  ///
+  /// - parameter color: The shadow color of the title to use for the specified appearance.
+  /// - parameter forAppearance: The TBControlAppearance that uses the specified title shadow color.
+  /// - parameter andStates: The UIControlStates that receive the title shadow color.
+  func setTitleShadowColor(color: UIColor?, forAppearance appearance: TBControlAppearance, andStates states: [UIControlState]) {
+    for state in states {
+      setTitleShadowColor(color, forAppearance: appearance, andState: state)
+    }
+  }
+  
   /// Sets the shadow color of the title to use for the specified appearance.
   ///
   /// - parameter color: The shadow color of the title to use for the specified appearance.
@@ -253,6 +297,17 @@ public extension TBMultiAppearanceButton {
     return backgroundImagesForAppearance[appearance]?[state]
   }
 
+  /// Sets the background image to use for the specified button appearance and multiple states.
+  ///
+  /// - parameter color: The background image to use for the specified appearance.
+  /// - parameter forAppearance: The TBControlAppearance that uses the specified background image.
+  /// - parameter andStates: The UIControlStates that receive the background image.
+  func setBackgroundImage(image: UIImage?, forAppearance appearance: TBControlAppearance, andStates states: [UIControlState]) {
+    for state in states {
+      setBackgroundImage(image, forAppearance: appearance, andState: state)
+    }
+  }
+  
   /// Sets the background image to use for the specified button appearance.
   ///
   /// - parameter color: The background image to use for the specified appearance.
@@ -283,6 +338,17 @@ public extension TBMultiAppearanceButton {
     return imagesForAppearance[appearance]?[state]
   }
 
+  /// Sets the image to use for the specified button appearance and multiple states.
+  ///
+  /// - parameter color: The image to use for the specified appearance.
+  /// - parameter forAppearance: The TBControlAppearance that uses the specified image.
+  /// - parameter andStates: The UIControlStates that receive the image.
+  func setImage(image: UIImage?, forAppearance appearance: TBControlAppearance, andStates states: [UIControlState]) {
+    for state in states {
+      setImage(image, forAppearance: appearance, andState: state)
+    }
+  }
+  
   /// Sets the image to use for the specified button appearance.
   ///
   /// - parameter color: The image to use for the specified appearance.
