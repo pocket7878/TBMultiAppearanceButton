@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "TBMultiAppearanceButton"
 
-  s.version          = "1.1.0"
+  s.version          = "1.2.0"
 
   s.summary          = "Swift framework to configure and switch between multiple appearances of a UIButton"
   s.homepage         = "https://github.com/TalkingBibles/TBMultiAppearanceButton"

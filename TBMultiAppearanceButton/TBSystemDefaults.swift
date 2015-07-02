@@ -25,6 +25,7 @@
 
 import UIKit
 
+/// TBSystemDefaults has static functions that return default values from UIKit.
 struct TBSystemDefaults {
   static func titleColorForState(state: UIControlState) -> UIColor? {
     let tempView = UIButton()
