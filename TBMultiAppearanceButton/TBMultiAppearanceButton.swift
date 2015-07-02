@@ -32,6 +32,16 @@ public class TBMultiAppearanceButton<TBControlAppearance: TBControlAppearanceTyp
   /// appearance.
   private var _appearance: Int? {
     didSet {
+      guard let appearance = _appearance else {
+        return
+      }
+      
+      updateAppearance(TBControlAppearance(rawValue: appearance))
+    }
+  }
+  
+  override public var highlighted: Bool {
+    didSet {
       guard let _appearance = _appearance else {
         return
       }
@@ -40,6 +50,19 @@ public class TBMultiAppearanceButton<TBControlAppearance: TBControlAppearanceTyp
     }
   }
   
+  override public var selected: Bool {
+    didSet {
+      guard let _appearance = _appearance else {
+        return
+      }
+      
+      updateAppearance(TBControlAppearance(rawValue: _appearance))
+    }
+  }
+  
+  /// Update the visible properties of the button as specified for the current state and appearance
+  ///
+  /// - parameter appearance: The TBControlAppearance to apply to the button.
   private func updateAppearance(appearance: TBControlAppearance) {
     // Cycle through states and update each
     setAttributedTitle(attributedTitleForAppearance(appearance, andState: state), forState: state)
@@ -60,8 +83,12 @@ public class TBMultiAppearanceButton<TBControlAppearance: TBControlAppearanceTyp
     enabled = enabledForAppearance(appearance, andState: state) ?? enabled
   }
   
+  /// Updates appearance for specified appearance if the specified state matches the current state
+  ///
+  /// - parameter appearance: The TBControlAppearance that has been updated.
+  /// - parameter state: The UIControlState that has been updated.
   private func shouldUpdateAppearance(appearance: TBControlAppearance, andState state: UIControlState) {
-    if _appearance == appearance.rawValue {
+    if _appearance == appearance.rawValue && self.state == state {
       updateAppearance(appearance)
     }
   }
@@ -73,6 +100,7 @@ public extension TBMultiAppearanceButton {
   /// Returns the title associated with the specified appearance.
   ///
   /// - parameter appearance: The TBControlAppearance that uses the title.
+  /// - parameter andState: The UIControlState that receives the title.
   ///
   /// - returns: The title for the specified appearance. If no title
   ///   has been set, return nil.
@@ -83,7 +111,8 @@ public extension TBMultiAppearanceButton {
   /// Sets the title to use for the specified appearance.
   ///
   /// - parameter title: The text string to use for the specified appearance.
-  /// - parameter appearance: The TBControlAppearance that uses the specified title.
+  /// - parameter forAppearance: The TBControlAppearance that uses the specified title.
+  /// - parameter andState: The UIControlState that receives the title.
   func setTitle(title: String?, forAppearance appearance: TBControlAppearance, andState state: UIControlState) {
     defer { shouldUpdateAppearance(appearance, andState: state) }
 
@@ -99,20 +128,22 @@ public extension TBMultiAppearanceButton {
     titlesForAppearance[appearance]?[state] = title
   }
 
-  /// Returns the styled title associated with the specified appearance.
+  /// Returns the attributed title associated with the specified appearance.
   ///
-  /// - parameter appearance: The TBControlAppearance that uses the title.
+  /// - parameter appearance: The TBControlAppearance that uses the attributed title.
+  /// - parameter andState: The UIControlState that receives the attributed title.
   ///
-  /// - returns: The title for the specified appearance. If no
+  /// - returns: The attributed title for the specified appearance. If no
   ///   attributed title has been set, return nil.
   func attributedTitleForAppearance(appearance: TBControlAppearance, andState state: UIControlState) -> NSAttributedString? {
     return attributedTitlesForAppearance[appearance]?[state]
   }
 
-  /// Sets the styled title to use for the specified appearance.
+  /// Sets the attributed title to use for the specified appearance.
   ///
   /// - parameter title: The styled text string to use for the specified appearance.
-  /// - parameter appearance: The TBControlAppearance that uses the specified title.
+  /// - parameter forAppearance: The TBControlAppearance that uses the specified attributed title.
+  /// - parameter andState: The UIControlState that receives the attributed title.
   func setAttributedTitle(title: NSAttributedString?, forAppearance appearance: TBControlAppearance, andState state: UIControlState) {
     defer { shouldUpdateAppearance(appearance, andState: state) }
     
@@ -131,16 +162,18 @@ public extension TBMultiAppearanceButton {
   /// Returns the title color associated with the specified appearance.
   ///
   /// - parameter appearance: The TBControlAppearance that uses the title color.
+  /// - parameter andState: The UIControlState that receives the title.
   ///
   /// - returns: The color of the title for the specified appearance.
   func titleColorForAppearance(appearance: TBControlAppearance, andState state: UIControlState) -> UIColor? {
     return titleColorsForAppearance[appearance]?[state]
   }
 
-  /// Sets the styled title to use for the specified appearance.
+  /// Sets the title color to use for the specified appearance.
   ///
   /// - parameter color: The color of the title to use for the specified appearance.
-  /// - parameter appearance: The TBControlAppearance that uses the specified color.
+  /// - parameter forAppearance: The TBControlAppearance that uses the specified title color.
+  /// - parameter andState: The UIControlState that receives the title color.
   func setTitleColor(color: UIColor?, forAppearance appearance: TBControlAppearance, andState state: UIControlState) {
     defer { shouldUpdateAppearance(appearance, andState: state) }
 
@@ -159,16 +192,18 @@ public extension TBMultiAppearanceButton {
   /// Returns the shadow color of the title used for a appearance.
   ///
   /// - parameter appearance: The TBControlAppearance that uses the title shadow color.
+  /// - parameter andState: The UIControlState that receives the title shadow color.
   ///
   /// - returns: The color of the title’s shadow for the specified appearance.
   func titleShadowColorForAppearance(appearance: TBControlAppearance, andState state: UIControlState) -> UIColor? {
     return titleShadowColorsForAppearance[appearance]?[state]
   }
 
-  /// Sets the styled title to use for the specified appearance.
+  /// Sets the shadow color of the title to use for the specified appearance.
   ///
-  /// - parameter color: The color of the title to use for the specified appearance.
-  /// - parameter appearance: The TBControlAppearance that uses the specified color.
+  /// - parameter color: The shadow color of the title to use for the specified appearance.
+  /// - parameter forAppearance: The TBControlAppearance that uses the specified title shadow color.
+  /// - parameter andState: The UIControlState that receives the title shadow color.
   func setTitleShadowColor(color: UIColor?, forAppearance appearance: TBControlAppearance, andState state: UIControlState) {
     defer { shouldUpdateAppearance(appearance, andState: state) }
 
@@ -190,6 +225,7 @@ public extension TBMultiAppearanceButton {
   /// Returns the background image used for a button appearance.
   ///
   /// - parameter appearance: The TBControlAppearance that uses the background image.
+  /// - parameter andState: The UIControlState that receives the background image.
   ///
   /// - returns: The background image used for the specified appearance.
   func backgroundImageForAppearance(appearance: TBControlAppearance, andState state: UIControlState) -> UIImage? {
@@ -199,7 +235,8 @@ public extension TBMultiAppearanceButton {
   /// Sets the background image to use for the specified button appearance.
   ///
   /// - parameter color: The background image to use for the specified appearance.
-  /// - parameter appearance: The TBControlAppearance that uses the specified image.
+  /// - parameter forAppearance: The TBControlAppearance that uses the specified background image.
+  /// - parameter andState: The UIControlState that receives the background image.
   func setBackgroundImage(image: UIImage?, forAppearance appearance: TBControlAppearance, andState state: UIControlState) {
     defer { shouldUpdateAppearance(appearance, andState: state) }
 
@@ -218,6 +255,7 @@ public extension TBMultiAppearanceButton {
   /// Returns the image used for a button appearance.
   ///
   /// - parameter appearance: The TBControlAppearance that uses the background image.
+  /// - parameter andState: The UIControlState that receives the image.
   ///
   /// - returns: The image used for the specified appearance.
   func imageForAppearance(appearance: TBControlAppearance, andState state: UIControlState) -> UIImage? {
@@ -227,7 +265,8 @@ public extension TBMultiAppearanceButton {
   /// Sets the image to use for the specified button appearance.
   ///
   /// - parameter color: The image to use for the specified appearance.
-  /// - parameter appearance: The TBControlAppearance that uses the specified image.
+  /// - parameter forAppearance: The TBControlAppearance that uses the specified image.
+  /// - parameter andState: The UIControlState that receives the image.
   func setImage(image: UIImage?, forAppearance appearance: TBControlAppearance, andState state: UIControlState) {
     defer { shouldUpdateAppearance(appearance, andState: state) }
 
@@ -249,6 +288,7 @@ public extension TBMultiAppearanceButton {
   /// Returns enabled'ness for specificed button appearance.
   ///
   /// - parameter appearance: The TBControlAppearance that is enabled or disabled.
+  /// - parameter andState: The UIControlState that receives the title.
   ///
   /// - returns: The enabled'ness used for the specified appearance. If not
   ///   specified, return nil.
@@ -262,7 +302,8 @@ public extension TBMultiAppearanceButton {
   /// otherwise, specify false to make it disabled. The default value is to make no change.
   ///
   /// - parameter enabled: The boolean value to use for the specified appearance.
-  /// - parameter appearance: The TBControlAppearance to be enabled or disabled.
+  /// - parameter forAppearance: The TBControlAppearance to be enabled or disabled.
+  /// - parameter andState: The UIControlState that receives the enabled'ness.
   func setEnabled(enabled: Bool?, forAppearance appearance: TBControlAppearance, andState state: UIControlState) {
     defer { shouldUpdateAppearance(appearance, andState: state) }
 

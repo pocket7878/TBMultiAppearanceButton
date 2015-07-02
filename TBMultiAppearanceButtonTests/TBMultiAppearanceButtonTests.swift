@@ -19,8 +19,10 @@ struct TBTestControlAppearance: TBControlAppearanceType {
 }
 
 class TBMultiAppearanceButtonTests: XCTestCase {
+  let buttonFrame = CGRectMake(0, 0, 120, 44)
+  
   func testActivatingAppearance() {
-    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: CGRectMake(0, 0, 120, 44))
+    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: buttonFrame)
     
     // There should be no appearance
     XCTAssertNil(button.appearance)
@@ -40,7 +42,7 @@ class TBMultiAppearanceButtonTests: XCTestCase {
     let tenString = "Ten"
     let nilString = ""
     
-    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: CGRectMake(0, 0, 120, 44))
+    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: buttonFrame)
     
     // Set titles for One and Ten
     button.setTitle(oneString, forAppearance: .One, andState: .Normal)
@@ -68,7 +70,7 @@ class TBMultiAppearanceButtonTests: XCTestCase {
     let anotherOneString = NSAttributedString(string: "Another One")
     let tenString = NSAttributedString(string: "Ten")
     
-    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: CGRectMake(0, 0, 120, 44))
+    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: buttonFrame)
     
     // Set attributed titles for One and Ten
     button.setAttributedTitle(oneString, forAppearance: .One, andState: .Normal)
@@ -97,7 +99,7 @@ class TBMultiAppearanceButtonTests: XCTestCase {
     let tenColor = UIColor.orangeColor()
     let nilColor = TBSystemDefaults.titleColorForState(.Normal)
     
-    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: CGRectMake(0, 0, 120, 44))
+    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: buttonFrame)
     
     // Set title colors for One and Ten
     button.setTitleColor(oneColor, forAppearance: .One, andState: .Normal)
@@ -126,7 +128,7 @@ class TBMultiAppearanceButtonTests: XCTestCase {
     let tenColor = UIColor.orangeColor()
     let nilColor = TBSystemDefaults.titleShadowColorForState(.Normal)
     
-    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: CGRectMake(0, 0, 120, 44))
+    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: buttonFrame)
     
     // Set title shadow colors for One and Ten
     button.setTitleShadowColor(oneColor, forAppearance: .One, andState: .Normal)
@@ -154,7 +156,7 @@ class TBMultiAppearanceButtonTests: XCTestCase {
     let anotherOneImage = UIImage(named: "AnotherOneBug", inBundle: testBundle, compatibleWithTraitCollection: nil)
     let tenImage = UIImage(named: "TenBug", inBundle: testBundle, compatibleWithTraitCollection: nil)
 
-    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: CGRectMake(0, 0, 120, 44))
+    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: buttonFrame)
     
     // Set background images for One and Ten
     button.setBackgroundImage(oneImage, forAppearance: .One, andState: .Normal)
@@ -182,7 +184,7 @@ class TBMultiAppearanceButtonTests: XCTestCase {
     let anotherOneImage = UIImage(named: "AnotherOneBug", inBundle: testBundle, compatibleWithTraitCollection: nil)
     let tenImage = UIImage(named: "TenBug", inBundle: testBundle, compatibleWithTraitCollection: nil)
     
-    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: CGRectMake(0, 0, 120, 44))
+    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: buttonFrame)
     
     // Set background images for One and Ten
     button.setImage(oneImage, forAppearance: .One, andState: .Normal)
@@ -210,7 +212,7 @@ class TBMultiAppearanceButtonTests: XCTestCase {
     let anotherOneBool = false
     let tenBool = false
     
-    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: CGRectMake(0, 0, 120, 44))
+    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: buttonFrame)
     
     // Set enabled for One and Ten
     button.setEnabled(oneBool, forAppearance: .One, andState: .Normal)
@@ -231,6 +233,42 @@ class TBMultiAppearanceButtonTests: XCTestCase {
     // Nullify Ten background image and check that enabled is false
     button.setEnabled(nil, forAppearance: .One, andState: .Normal)
     XCTAssertEqual(button.enabled, false)
+  }
+  
+  func testHighlighted() {
+    let normalTitle = "Normal"
+    let highlightedTitle = "Hightlighted"
+    
+    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: buttonFrame)
+    
+    button.setTitle(normalTitle, forAppearance: .One, andState: .Normal)
+    button.setTitle(highlightedTitle, forAppearance: .One, andState: .Highlighted)
+    
+    // Activate One and check for normal title
+    button.activateAppearance(.One)
+    XCTAssertEqual(button.titleLabel?.text, normalTitle)
+    
+    // Highlight One and check for highlighted title
+    button.highlighted = true
+    XCTAssertEqual(button.titleLabel?.text, highlightedTitle)
+  }
+  
+  func testSelected() {
+    let normalTitle = "Normal"
+    let selectedTitle = "Selected"
+    
+    let button = TBMultiAppearanceButton<TBTestControlAppearance>(frame: buttonFrame)
+    
+    button.setTitle(normalTitle, forAppearance: .One, andState: .Normal)
+    button.setTitle(selectedTitle, forAppearance: .One, andState: .Selected)
+    
+    // Activate One and check for normal title
+    button.activateAppearance(.One)
+    XCTAssertEqual(button.titleLabel?.text, normalTitle)
+    
+    // Select One and check for selected title
+    button.selected = true
+    XCTAssertEqual(button.titleLabel?.text, selectedTitle)
   }
 }
 
