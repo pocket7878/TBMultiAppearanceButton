@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TBMultiStateButton.xcodeproj">
+      location = "self:TBMultiAppearanceButton.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBCF90D21B44A3BC00FEE091 /* TBControlAppearanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF90D11B44A3BC00FEE091 /* TBControlAppearanceType.swift */; };
+		CBCF90D31B44BCA800FEE091 /* TBSystemDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD56F071B447D5E0052CBB5 /* TBSystemDefaults.swift */; };
+		CBCF90D51B44BDE000FEE091 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBCF90D41B44BDE000FEE091 /* Images.xcassets */; };
+		CBCF90D71B44BFCA00FEE091 /* XCTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF90D61B44BFCA00FEE091 /* XCTestHelpers.swift */; };
+		CBD56F011B4468980052CBB5 /* TBMultiAppearanceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD56EFD1B4468980052CBB5 /* TBMultiAppearanceButton.swift */; };
+		CBD56F081B447D5E0052CBB5 /* TBSystemDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD56F071B447D5E0052CBB5 /* TBSystemDefaults.swift */; };
+		CBD56F1A1B449BE90052CBB5 /* TBMultiAppearanceButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD56F191B449BE90052CBB5 /* TBMultiAppearanceButtonTests.swift */; };
+		CBD56F1C1B449BE90052CBB5 /* TBMultiAppearanceButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC549ED1B438B7D00B3A774 /* TBMultiAppearanceButton.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBD56F1D1B449BE90052CBB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBC549E41B438B7D00B3A774 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBC549EC1B438B7D00B3A774;
+			remoteInfo = TBMultiAppearanceButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CBC549ED1B438B7D00B3A774 /* TBMultiAppearanceButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TBMultiAppearanceButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBCF90D11B44A3BC00FEE091 /* TBControlAppearanceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBControlAppearanceType.swift; sourceTree = "<group>"; };
+		CBCF90D41B44BDE000FEE091 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CBCF90D61B44BFCA00FEE091 /* XCTestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestHelpers.swift; sourceTree = "<group>"; };
+		CBD56EFB1B4468980052CBB5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TBMultiAppearanceButton/Info.plist; sourceTree = SOURCE_ROOT; };
+		CBD56EFD1B4468980052CBB5 /* TBMultiAppearanceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TBMultiAppearanceButton.swift; path = TBMultiAppearanceButton/TBMultiAppearanceButton.swift; sourceTree = SOURCE_ROOT; };
+		CBD56F071B447D5E0052CBB5 /* TBSystemDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TBSystemDefaults.swift; path = TBMultiAppearanceButton/TBSystemDefaults.swift; sourceTree = SOURCE_ROOT; };
+		CBD56F171B449BE90052CBB5 /* TBMultiAppearanceButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBMultiAppearanceButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBD56F191B449BE90052CBB5 /* TBMultiAppearanceButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBMultiAppearanceButtonTests.swift; sourceTree = "<group>"; };
+		CBD56F1B1B449BE90052CBB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBC549E91B438B7D00B3A774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBD56F141B449BE90052CBB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBD56F1C1B449BE90052CBB5 /* TBMultiAppearanceButton.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBC549E31B438B7D00B3A774 = {
+			isa = PBXGroup;
+			children = (
+				CBC549EF1B438B7D00B3A774 /* TBMultiAppearanceButton */,
+				CBD56F181B449BE90052CBB5 /* TBMultiAppearanceButtonTests */,
+				CBC549EE1B438B7D00B3A774 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBC549EE1B438B7D00B3A774 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBC549ED1B438B7D00B3A774 /* TBMultiAppearanceButton.framework */,
+				CBD56F171B449BE90052CBB5 /* TBMultiAppearanceButtonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBC549EF1B438B7D00B3A774 /* TBMultiAppearanceButton */ = {
+			isa = PBXGroup;
+			children = (
+				CBD56EFD1B4468980052CBB5 /* TBMultiAppearanceButton.swift */,
+				CBCF90D11B44A3BC00FEE091 /* TBControlAppearanceType.swift */,
+				CBD56F071B447D5E0052CBB5 /* TBSystemDefaults.swift */,
+				CBD56F031B4469020052CBB5 /* Supporting Files */,
+			);
+			path = TBMultiAppearanceButton;
+			sourceTree = "<group>";
+		};
+		CBD56F031B4469020052CBB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBD56EFB1B4468980052CBB5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBD56F181B449BE90052CBB5 /* TBMultiAppearanceButtonTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBD56F191B449BE90052CBB5 /* TBMultiAppearanceButtonTests.swift */,
+				CBCF90D61B44BFCA00FEE091 /* XCTestHelpers.swift */,
+				CBCF90D41B44BDE000FEE091 /* Images.xcassets */,
+				CBD56F1B1B449BE90052CBB5 /* Info.plist */,
+			);
+			path = TBMultiAppearanceButtonTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CBC549EA1B438B7D00B3A774 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CBC549EC1B438B7D00B3A774 /* TBMultiAppearanceButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBC54A011B438B7D00B3A774 /* Build configuration list for PBXNativeTarget "TBMultiAppearanceButton" */;
+			buildPhases = (
+				CBC549E81B438B7D00B3A774 /* Sources */,
+				CBC549E91B438B7D00B3A774 /* Frameworks */,
+				CBC549EA1B438B7D00B3A774 /* Headers */,
+				CBC549EB1B438B7D00B3A774 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TBMultiAppearanceButton;
+			productName = TBMultiAppearanceButton;
+			productReference = CBC549ED1B438B7D00B3A774 /* TBMultiAppearanceButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CBD56F161B449BE90052CBB5 /* TBMultiAppearanceButtonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBD56F1F1B449BE90052CBB5 /* Build configuration list for PBXNativeTarget "TBMultiAppearanceButtonTests" */;
+			buildPhases = (
+				CBD56F131B449BE90052CBB5 /* Sources */,
+				CBD56F141B449BE90052CBB5 /* Frameworks */,
+				CBD56F151B449BE90052CBB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBD56F1E1B449BE90052CBB5 /* PBXTargetDependency */,
+			);
+			name = TBMultiAppearanceButtonTests;
+			productName = TBMultiAppearanceButtonTests;
+			productReference = CBD56F171B449BE90052CBB5 /* TBMultiAppearanceButtonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBC549E41B438B7D00B3A774 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Talking Bibles International";
+				TargetAttributes = {
+					CBC549EC1B438B7D00B3A774 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 9HWYXRWL2V;
+					};
+					CBD56F161B449BE90052CBB5 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = CBC549E71B438B7D00B3A774 /* Build configuration list for PBXProject "TBMultiAppearanceButton" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CBC549E31B438B7D00B3A774;
+			productRefGroup = CBC549EE1B438B7D00B3A774 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBC549EC1B438B7D00B3A774 /* TBMultiAppearanceButton */,
+				CBD56F161B449BE90052CBB5 /* TBMultiAppearanceButtonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBC549EB1B438B7D00B3A774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBD56F151B449BE90052CBB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBCF90D51B44BDE000FEE091 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBC549E81B438B7D00B3A774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBD56F081B447D5E0052CBB5 /* TBSystemDefaults.swift in Sources */,
+				CBD56F011B4468980052CBB5 /* TBMultiAppearanceButton.swift in Sources */,
+				CBCF90D21B44A3BC00FEE091 /* TBControlAppearanceType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBD56F131B449BE90052CBB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBCF90D71B44BFCA00FEE091 /* XCTestHelpers.swift in Sources */,
+				CBCF90D31B44BCA800FEE091 /* TBSystemDefaults.swift in Sources */,
+				CBD56F1A1B449BE90052CBB5 /* TBMultiAppearanceButtonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBD56F1E1B449BE90052CBB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBC549EC1B438B7D00B3A774 /* TBMultiAppearanceButton */;
+			targetProxy = CBD56F1D1B449BE90052CBB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CBC549FF1B438B7D00B3A774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CBC54A001B438B7D00B3A774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CBC54A021B438B7D00B3A774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/TBMultiAppearanceButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.talkingbibles.TBMultiAppearanceButton;
+				PRODUCT_NAME = TBMultiAppearanceButton;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CBC54A031B438B7D00B3A774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/TBMultiAppearanceButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.talkingbibles.TBMultiAppearanceButton;
+				PRODUCT_NAME = TBMultiAppearanceButton;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CBD56F201B449BE90052CBB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TBMultiAppearanceButtonTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.talkingbibles.TBMultiAppearanceButtonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CBD56F211B449BE90052CBB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TBMultiAppearanceButtonTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.talkingbibles.TBMultiAppearanceButtonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBC549E71B438B7D00B3A774 /* Build configuration list for PBXProject "TBMultiAppearanceButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC549FF1B438B7D00B3A774 /* Debug */,
+				CBC54A001B438B7D00B3A774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBC54A011B438B7D00B3A774 /* Build configuration list for PBXNativeTarget "TBMultiAppearanceButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBC54A021B438B7D00B3A774 /* Debug */,
+				CBC54A031B438B7D00B3A774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBD56F1F1B449BE90052CBB5 /* Build configuration list for PBXNativeTarget "TBMultiAppearanceButtonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBD56F201B449BE90052CBB5 /* Debug */,
+				CBD56F211B449BE90052CBB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBC549E41B438B7D00B3A774 /* Project object */;
+}
