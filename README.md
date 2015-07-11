@@ -1,8 +1,8 @@
 # <img src="https://avatars3.githubusercontent.com/u/12140183" width="26" height="26"> TBMultiAppearanceButton
 
+[![MIT License](https://img.shields.io/badge/license-MIT%20License-blue.svg)](LICENSE)
 [![Cocoapod compatible](https://img.shields.io/cocoapods/v/TBMultiAppearanceButton.svg)](https://cocoapods.org/pods/TBMultiAppearanceButton)
 [![Carthage compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![MIT License](https://img.shields.io/badge/license-MIT%20License-blue.svg)](LICENSE)
 
 Swift framework to configure and switch between multiple appearances of a UIButton, courtesy
 of [Talking Bibles International](https://github.com/TalkingBibles) and [Clay Smith](https://github.com/stphnclysmth)
