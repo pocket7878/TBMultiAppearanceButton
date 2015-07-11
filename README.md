@@ -1,4 +1,4 @@
-# <img src="https://avatars3.githubusercontent.com/u/12140183" width="36" height="36"> TBMultiAppearanceButton
+# <img src="https://avatars3.githubusercontent.com/u/12140183" width="26" height="26"> TBMultiAppearanceButton
 
 [![Cocoapod compatible](https://img.shields.io/cocoapods/v/TBMultiAppearanceButton.svg)](https://cocoapods.org/pods/TBMultiAppearanceButton)
 [![Carthage compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
