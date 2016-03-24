@@ -35,6 +35,7 @@ public class TBMultiAppearanceButton<TBControlAppearance: TBControlAppearanceTyp
   private var backgroundImagesForAppearance = [TBControlAppearance: [UIControlState: UIImage]]()
   private var imagesForAppearance = [TBControlAppearance: [UIControlState: UIImage]]()
   private var enabledForAppearance = [TBControlAppearance: [UIControlState: Bool]]()
+  private var targetsForAppearance = [TBControlAppearance: [UIControlEvents: (AnyObject?, Selector)]]()
 
   public override init(frame: CGRect) {
     super.init(frame: frame)
@@ -113,6 +114,16 @@ public class TBMultiAppearanceButton<TBControlAppearance: TBControlAppearanceTyp
       updateAppearance(appearance)
     }
   }
+    
+    /// Update targets for specified appearance
+    private func updateTargetsForAppearance(appearance: TBControlAppearance) {
+        self.removeTarget(nil, action: nil, forControlEvents: .AllEvents)
+        if let targets = self.targetsForAppearance[appearance] {
+            for (e, (t, s)) in targets {
+                self.addTarget(t, action: s, forControlEvents: e)
+            }
+        }
+    }
 }
 
 public extension TBMultiAppearanceButton {
@@ -368,7 +379,15 @@ public extension TBMultiAppearanceButton {
     
     imagesForAppearance[appearance]?[state] = image
   }
-  
+    
+  // MARK: - Configuring the Button Target
+    func setTarget(target: AnyObject?, selector: Selector, forAppearance appearance: TBControlAppearance, andEvent event: UIControlEvents) {
+        if targetsForAppearance[appearance] == nil {
+            targetsForAppearance[appearance] = [:]
+        }
+        
+        targetsForAppearance[appearance]?[event] = (target, selector)
+    }
 
   // MARK: Setting and Getting Control Appearance
 
@@ -377,6 +396,7 @@ public extension TBMultiAppearanceButton {
   /// - parameter appearance: The TBControlAppearance to display.
   public func activateAppearance(appearance: TBControlAppearance) {
     _appearance = appearance
+    updateTargetsForAppearance(appearance)
   }
   
   /// The currently active TBControlAppearance
